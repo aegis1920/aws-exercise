@@ -9,7 +9,7 @@ public class AwsExerciseController {
 
     @GetMapping
     public String projectString() {
-        return "AWS Exercise의 bingbong 프로젝트입니다.";
+        return "AWS Exercise의 v3 bingbong 프로젝트입니다.";
     }
 
     @GetMapping("/health")
