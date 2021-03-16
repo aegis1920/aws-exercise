@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: ~/deploy
+    destination: /home/ec2-user/deploy
 hooks:
   AfterInstall:
     - location: scripts/set_owner.sh
