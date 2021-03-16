@@ -4,5 +4,5 @@ echo '============================'
 
 source /home/ec2-user/.bash_profile
 
-cd /home/ec2-user/deploy/aws-exercise
+cd /home/ec2-user/deploy
 ./gradlew clean build
