@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/deploy
+hooks:
+  AfterInstall:
+    - location: scripts/set_owner.sh
+      timeout: 5
+      runas: root
+    - location: scripts/install_dependencies.sh
+      timeout: 120
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/restart_server.sh
+      timeout: 30
+      runas: root
+  ValidateService:
+    - location: scripts/validate_server.sh
+      timeout: 30
+      runas: ec2-user
