@@ -11,14 +11,14 @@ hooks:
     - location: scripts/install_dependencies.sh
       timeout: 120
       runas: ec2-user
-    ApplicationStart:
-      - location: scripts/restart_webserver.sh
-        timeout: 20
-        runas: root
-      - location: scripts/run_application_server.sh
-        timeout: 120
-        runas: ec2-user
-    ValidateService:
-      - location: scripts/validate_server.sh
-        timeout: 120
-        runas: ec2-user
+  ApplicationStart:
+    - location: scripts/restart_webserver.sh
+      timeout: 20
+      runas: root
+    - location: scripts/run_application_server.sh
+      timeout: 120
+      runas: ec2-user
+  ValidateService:
+    - location: scripts/validate_server.sh
+      timeout: 120
+      runas: ec2-user
