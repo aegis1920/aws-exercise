@@ -12,7 +12,7 @@ hooks:
       timeout: 120
       runas: ec2-user
     ApplicationStart:
-      - location: scripts/restart_server.sh
+      - location: scripts/restart_webserver.sh
         timeout: 20
         runas: root
       - location: scripts/run_application_server.sh
